@@ -393,6 +393,100 @@ $green: #0b7572;
   }
 }
 
+.services {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 212px;
+  h2 {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+    /* or 60px */
+
+    /* main font */
+
+    color: $main-color;
+  }
+  p {
+    font-family: $additional-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    max-width: 667px;
+    /* additional font */
+    margin-top: 32px;
+    margin-bottom: 56px;
+    color: $additional-color;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 30px;
+    .services-item {
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      .services-tablet-1, .services-tablet-2, .services-mobile{
+        display: none;
+      }
+      .services-text {
+        margin-left: 32px;
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h3 {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 135%;
+          /* or 27px */
+
+          margin-top: 24px;
+          margin-bottom: 16px;
+          /* main font */
+
+          color: $main-color;
+        }
+        span {
+          font-family: $additional-font;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          /* or 24px */
+          margin-bottom: 32px;
+          /* additional font */
+          max-width: 291px;
+          color: $additional-color;
+        }
+        strong {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 135%;
+          /* or 22px */
+            padding-bottom: 5px;
+            border-bottom: 3px solid #FFCE50;
+          /* main font */
+
+          color: $main-color
+          
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 984px) {
   .hero {
     display: flex;
@@ -783,6 +877,123 @@ $green: #0b7572;
       }
     }
   }
+
+
+
+
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 172px;
+    h2 {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 125%;
+      /* or 60px */
+  
+      /* main font */
+  
+      color: $main-color;
+    }
+    p {
+      font-family: $additional-font;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      /* or 24px */
+      max-width: 667px;
+      /* additional font */
+      margin-top: 32px;
+      margin-bottom: 56px;
+      color: $additional-color;
+    }
+  
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px 0px;
+      .services-item {
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .services-1, .services-2{
+            display: none;
+        }
+        .services-tablet-1,.services-tablet-2{
+            display: block;
+            width: 100%;
+            object-fit: contain;
+            
+        }
+        &:last-child{
+            display: none;
+        }
+
+        .services-text {
+          margin-left: 32px;
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-right: 10px;
+          h3 {
+            font-family: $main-font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 135%;
+            /* or 27px */
+  
+            margin-top: 24px;
+            margin-bottom: 16px;
+            /* main font */
+  
+            color: $main-color;
+          }
+          span {
+            font-family: $additional-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            /* or 24px */
+            margin-bottom: 32px;
+            /* additional font */
+            max-width: 519px;
+            color: $additional-color;
+          }
+          strong {
+            font-family: $main-font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 135%;
+            /* or 22px */
+              padding-bottom: 5px;
+              border-bottom: 3px solid #FFCE50;
+            /* main font */
+  
+            color: $main-color
+            
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
 }
 
 @media only screen and (max-width: 730px) {
@@ -794,65 +1005,60 @@ $green: #0b7572;
   }
 }
 
+@media only screen and (max-width: 571px) {
+  .why-us {
+    margin-bottom: 100px;
+    width: 100%;
+    h2 {
+      display: block;
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 125%;
+      /* or 35px */
+      /* main font */
 
+      color: $main-color;
+      margin-bottom: 48px;
+    }
+    header {
+      background-image: url(/images/why-us-tablet.png);
+      height: 383px;
+      background-size: cover;
+      display: none;
 
-@media only screen and (max-width:571px){
-    .why-us {
-        margin-bottom: 100px;
-        width: 100%;
-        h2 {
-          display: block;
-          font-family: $main-font;
-          font-style: normal;
-          font-weight: 600;
-          font-size: 34px;
-          line-height: 125%;
-          /* or 35px */
-          /* main font */
-    
-          color: $main-color;
-          margin-bottom: 48px;
-        }
-        header {
-          background-image: url(/images/why-us-tablet.png);
-          height: 383px;
-          background-size: cover;
-          display: none;
-    
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-    
-            width: 290px;
-            height: 0px;
-            border-left: 0px solid transparent;
-            border-right: 240px solid transparent;
-            border-bottom: 383px solid $green;
-          }
-    
-          &::after {
-            content: "Почему с нами выгоднее?";
-            position: absolute;
-            font-family: $main-font;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 44px;
-            line-height: 125%;
-            /* or 60px */
-            max-width: 334px;
-            /* white */
-            top: 50%;
-            transform: translateY(-50%);
-            left: 32px;
-            color: #fff;
-          }
-        }
-    }    
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+
+        width: 290px;
+        height: 0px;
+        border-left: 0px solid transparent;
+        border-right: 240px solid transparent;
+        border-bottom: 383px solid $green;
+      }
+
+      &::after {
+        content: "Почему с нами выгоднее?";
+        position: absolute;
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 125%;
+        /* or 60px */
+        max-width: 334px;
+        /* white */
+        top: 50%;
+        transform: translateY(-50%);
+        left: 32px;
+        color: #fff;
+      }
+    }
+  }
 }
-
-
-
 
 @media only screen and (max-width: 418px) {
   .hero {
@@ -1173,7 +1379,7 @@ $green: #0b7572;
       font-size: 28px;
       line-height: 125%;
       /* or 35px */
-        max-width: 245px;
+      max-width: 245px;
       /* main font */
 
       color: $main-color;
@@ -1260,4 +1466,123 @@ $green: #0b7572;
       }
     }
   }
+
+
+
+
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 120px;
+    h2 {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 125%;
+      /* or 60px */
+  
+      /* main font */
+  
+      color: $main-color;
+    }
+    p {
+      font-family: $additional-font;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 150%;
+      /* or 24px */
+      max-width: 667px;
+      /* additional font */
+      margin-top: 24px;
+      margin-bottom: 32px;
+      color: $additional-color;
+    }
+  
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0px 0px;
+      .services-item {
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        .services-1, .services-2{
+            display: none;
+        }
+        &:nth-child(2){
+            display: none;
+        }
+        .services-mobile{
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+        &:last-child, :nth-child(2){
+            display: none;
+        }
+
+        .services-text {
+          margin-left: 24px;
+          margin-bottom: 24px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-right: 6px;
+          h3 {
+            font-family: $main-font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 135%;
+            /* or 27px */
+  
+            margin-top: 24px;
+            margin-bottom: 16px;
+            /* main font */
+  
+            color: $main-color;
+          }
+          span {
+            font-family: $additional-font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 135%;
+            /* or 24px */
+            margin-bottom: 24px;
+            /* additional font */
+            max-width: 491px;
+            color: $additional-color;
+            display: block;
+          }
+          strong {
+            font-family: $main-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 150%;
+            /* or 22px */
+              padding-bottom: 5px;
+              border-bottom: 3px solid #FFCE50;
+            /* main font */
+  
+            color: $main-color
+            
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
 }
