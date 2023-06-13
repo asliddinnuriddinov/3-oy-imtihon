@@ -192,6 +192,7 @@ $green: #0b7572;
           background: #ffffff;
           box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
           border-radius: 10px;
+          cursor: pointer;
 
           h3 {
             font-family: $main-font;
@@ -284,25 +285,108 @@ $green: #0b7572;
         display: flex;
         align-items: flex-end;
         letter-spacing: 0.3em;
-        
+
         /* main font */
 
         color: $main-color;
         border-bottom: 3px solid $yellow;
         padding-bottom: 19px;
-        .sphere-right-inner-span{
-            font-family: $additional-font;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 260%;
-            /* or 81px */
-            border-bottom: none;
-            padding-bottom: 0;
-    
-            /* main font */
-    
-            color: $additional-color;
+        .sphere-right-inner-span {
+          font-family: $additional-font;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 260%;
+          /* or 81px */
+          border-bottom: none;
+          padding-bottom: 0;
+
+          /* main font */
+
+          color: $additional-color;
+        }
+      }
+    }
+  }
+}
+
+.why-us {
+  margin-bottom: 120px;
+  h2 {
+    display: none;
+  }
+  header {
+    background-image: url(/images/why-us-img.png);
+    height: 483px;
+    background-size: cover;
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 360px;
+      height: 0px;
+      border-left: 0px solid transparent;
+      border-right: 300px solid transparent;
+      border-bottom: 483px solid $green;
+    }
+
+    &::after {
+      content: "Почему с нами выгоднее?";
+      position: absolute;
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 125%;
+      text-align: left;
+      /* or 60px */
+      max-width: 362px;
+      /* white */
+      top: 50%;
+      transform: translateY(-50%);
+      left: 90px;
+      color: #fff;
+    }
+  }
+
+  .why-us-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 62px 60px;
+    margin-top: 72px;
+    margin-left: 50px;
+    .why-us-item {
+      display: flex;
+      align-items: center;
+      gap: 0 40px;
+      .why-us-text {
+        max-width: 291px;
+        h4 {
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 135%;
+          /* or 27px */
+
+          /* main font */
+          margin-bottom: 16px;
+          color: $main-color;
+        }
+        p {
+          font-family: $additional-font;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          /* or 24px */
+
+          /* additional font */
+
+          color: $additional-color;
         }
       }
     }
@@ -447,12 +531,6 @@ $green: #0b7572;
     }
   }
 
-
-
-
-
-
-
   .sphere {
     display: flex;
     flex-direction: column;
@@ -465,9 +543,9 @@ $green: #0b7572;
       font-size: 44px;
       line-height: 125%;
       /* or 60px */
-  
+
       /* main font */
-  
+
       color: $main-color;
     }
     p {
@@ -483,7 +561,7 @@ $green: #0b7572;
       max-width: 667px;
       color: $additional-color;
     }
-  
+
     .sphere-grid {
       display: flex;
       flex-direction: column;
@@ -499,11 +577,12 @@ $green: #0b7572;
             display: flex;
             align-items: flex-start;
             gap: 0 32px;
-            padding: 40px 128px 48px 40px;
+            padding: 40px 70px 48px 40px;
             background: #ffffff;
             box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
             border-radius: 10px;
-  
+            cursor: pointer;
+
             h3 {
               font-family: $main-font;
               font-style: normal;
@@ -513,10 +592,10 @@ $green: #0b7572;
               /* or 30px */
               margin-top: -6px;
               /* main font */
-  
+
               color: $main-color;
             }
-  
+
             p {
               font-family: $additional-font;
               font-style: normal;
@@ -524,13 +603,13 @@ $green: #0b7572;
               font-size: 16px;
               line-height: 150%;
               /* or 24px */
-  
+
               /* additional font */
               margin-top: 24px;
               margin-bottom: 0;
               color: $additional-color;
             }
-  
+
             .circle {
               width: 45px;
               height: 25px;
@@ -550,13 +629,13 @@ $green: #0b7572;
               }
             }
           }
-  
+
           #one:checked ~ label .circle u,
           #two:checked ~ label .circle u,
           #three:checked ~ label .circle u {
             display: block;
           }
-  
+
           #one:checked ~ label,
           #two:checked ~ label,
           #three:checked ~ label {
@@ -567,7 +646,7 @@ $green: #0b7572;
           }
         }
       }
-  
+
       .sphere-right {
         display: flex;
         flex-direction: column;
@@ -580,12 +659,12 @@ $green: #0b7572;
           font-size: 20px;
           line-height: 150%;
           /* or 30px */
-  
+
           /* main font */
-  
+
           color: $main-color;
         }
-  
+
         span {
           font-family: $main-font;
           font-style: normal;
@@ -596,45 +675,184 @@ $green: #0b7572;
           display: flex;
           align-items: flex-end;
           letter-spacing: 0.3em;
-          
+
           /* main font */
-  
+
           color: $main-color;
           border-bottom: 3px solid $yellow;
           padding-bottom: 39px;
-          .sphere-right-inner-span{
-              font-family: $additional-font;
-              font-style: normal;
-              font-weight: 600;
-              font-size: 16px;
-              line-height: 260%;
-              /* or 81px */
-              border-bottom: none;
-              padding-bottom: 0;
-      
-              /* main font */
-      
-              color: $additional-color;
+          .sphere-right-inner-span {
+            font-family: $additional-font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 260%;
+            /* or 81px */
+            border-bottom: none;
+            padding-bottom: 0;
+
+            /* main font */
+
+            color: $additional-color;
           }
         }
       }
     }
   }
 
+  .why-us {
+    margin-bottom: 100px;
+    width: 100%;
+    header {
+      background-image: url(/images/why-us-tablet.png);
+      height: 383px;
+      background-size: cover;
 
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
 
+        width: 290px;
+        height: 0px;
+        border-left: 0px solid transparent;
+        border-right: 240px solid transparent;
+        border-bottom: 383px solid $green;
+      }
 
-
-}
-
-@media only screen and (max-width:730px){
-    .sphere {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 88px;
+      &::after {
+        content: "Почему с нами выгоднее?";
+        position: absolute;
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 125%;
+        /* or 60px */
+        max-width: 334px;
+        /* white */
+        top: 50%;
+        transform: translateY(-50%);
+        left: 32px;
+        color: #fff;
+      }
     }
+
+    .why-us-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 48px 0px;
+      margin-top: 48px;
+      margin-left: 0px;
+      .why-us-item {
+        display: flex;
+        align-items: center;
+        gap: 0 48px;
+        .why-us-text {
+          max-width: 394px;
+          h4 {
+            font-family: $main-font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 135%;
+            /* or 27px */
+
+            /* main font */
+            margin-bottom: 16px;
+            color: $main-color;
+          }
+          p {
+            font-family: $additional-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            /* or 24px */
+
+            /* additional font */
+
+            color: $additional-color;
+          }
+        }
+        img {
+          width: 88px;
+          height: 88px;
+        }
+      }
+    }
+  }
 }
+
+@media only screen and (max-width: 730px) {
+  .sphere {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 88px;
+  }
+}
+
+
+
+@media only screen and (max-width:571px){
+    .why-us {
+        margin-bottom: 100px;
+        width: 100%;
+        h2 {
+          display: block;
+          font-family: $main-font;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 34px;
+          line-height: 125%;
+          /* or 35px */
+          /* main font */
+    
+          color: $main-color;
+          margin-bottom: 48px;
+        }
+        header {
+          background-image: url(/images/why-us-tablet.png);
+          height: 383px;
+          background-size: cover;
+          display: none;
+    
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+    
+            width: 290px;
+            height: 0px;
+            border-left: 0px solid transparent;
+            border-right: 240px solid transparent;
+            border-bottom: 383px solid $green;
+          }
+    
+          &::after {
+            content: "Почему с нами выгоднее?";
+            position: absolute;
+            font-family: $main-font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 44px;
+            line-height: 125%;
+            /* or 60px */
+            max-width: 334px;
+            /* white */
+            top: 50%;
+            transform: translateY(-50%);
+            left: 32px;
+            color: #fff;
+          }
+        }
+    }    
+}
+
+
+
 
 @media only screen and (max-width: 418px) {
   .hero {
@@ -773,12 +991,6 @@ $green: #0b7572;
     }
   }
 
-
-
-
-
-
-
   .sphere {
     display: flex;
     flex-direction: column;
@@ -790,11 +1002,11 @@ $green: #0b7572;
       font-weight: 600;
       font-size: 28px;
       line-height: 125%;
-        max-width: 345px;
+      max-width: 345px;
       /* or 60px */
-        margin-bottom: 32px;
+      margin-bottom: 32px;
       /* main font */
-  
+
       color: $main-color;
     }
     p {
@@ -811,7 +1023,7 @@ $green: #0b7572;
       color: $additional-color;
       display: none;
     }
-  
+
     .sphere-grid {
       display: flex;
       flex-direction: column;
@@ -831,7 +1043,8 @@ $green: #0b7572;
             background: #ffffff;
             box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
             border-radius: 10px;
-  
+            cursor: pointer;
+
             h3 {
               font-family: $main-font;
               font-style: normal;
@@ -841,10 +1054,10 @@ $green: #0b7572;
               /* or 30px */
               margin-top: -6px;
               /* main font */
-  
+
               color: $main-color;
             }
-  
+
             p {
               font-family: $additional-font;
               font-style: normal;
@@ -852,13 +1065,13 @@ $green: #0b7572;
               font-size: 14px;
               line-height: 150%;
               /* or 24px */
-                display: block;
+              display: block;
               /* additional font */
               margin-top: 16px;
               margin-bottom: 0;
               color: $additional-color;
             }
-  
+
             .circle {
               width: 34px;
               height: 15px;
@@ -878,13 +1091,13 @@ $green: #0b7572;
               }
             }
           }
-  
+
           #one:checked ~ label .circle u,
           #two:checked ~ label .circle u,
           #three:checked ~ label .circle u {
             display: block;
           }
-  
+
           #one:checked ~ label,
           #two:checked ~ label,
           #three:checked ~ label {
@@ -895,7 +1108,7 @@ $green: #0b7572;
           }
         }
       }
-  
+
       .sphere-right {
         display: flex;
         flex-direction: column;
@@ -908,12 +1121,12 @@ $green: #0b7572;
           font-size: 20px;
           line-height: 150%;
           /* or 30px */
-  
+
           /* main font */
-  
+
           color: $main-color;
         }
-  
+
         span {
           font-family: $main-font;
           font-style: normal;
@@ -924,39 +1137,127 @@ $green: #0b7572;
           display: flex;
           align-items: flex-end;
           letter-spacing: 0.3em;
-          
+
           /* main font */
-  
+
           color: $main-color;
           border-bottom: 3px solid $yellow;
           padding-bottom: 39px;
-          .sphere-right-inner-span{
-              font-family: $additional-font;
-              font-style: normal;
-              font-weight: 600;
-              font-size: 16px;
-              line-height: 260%;
-              /* or 81px */
-              border-bottom: none;
-              padding-bottom: 0;
-      
-              /* main font */
-      
-              color: $additional-color;
+          .sphere-right-inner-span {
+            font-family: $additional-font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 260%;
+            /* or 81px */
+            border-bottom: none;
+            padding-bottom: 0;
+
+            /* main font */
+
+            color: $additional-color;
           }
         }
       }
     }
   }
 
+  .why-us {
+    margin-bottom: 100px;
+    width: 100%;
+    h2 {
+      display: block;
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 125%;
+      /* or 35px */
+        max-width: 245px;
+      /* main font */
 
+      color: $main-color;
+      margin-bottom: 48px;
+    }
+    header {
+      background-image: url(/images/why-us-tablet.png);
+      height: 383px;
+      background-size: cover;
+      display: none;
 
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
 
+        width: 290px;
+        height: 0px;
+        border-left: 0px solid transparent;
+        border-right: 240px solid transparent;
+        border-bottom: 383px solid $green;
+      }
 
+      &::after {
+        content: "Почему с нами выгоднее?";
+        position: absolute;
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 125%;
+        /* or 60px */
+        max-width: 334px;
+        /* white */
+        top: 50%;
+        transform: translateY(-50%);
+        left: 32px;
+        color: #fff;
+      }
+    }
 
+    .why-us-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 38px 0px;
+      margin-top: 0px;
+      margin-left: 0px;
+      .why-us-item {
+        display: flex;
+        align-items: center;
+        gap: 0 16px;
+        .why-us-text {
+          max-width: 269px;
+          h4 {
+            font-family: $main-font;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 135%;
+            /* or 27px */
 
+            /* main font */
+            margin-bottom: 12px;
+            color: $main-color;
+          }
+          p {
+            font-family: $additional-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 150%;
+            /* or 24px */
 
+            /* additional font */
 
-
-
+            color: $additional-color;
+          }
+        }
+        img {
+          width: 52px;
+          height: 52px;
+        }
+      }
+    }
+  }
 }
